@@ -8,11 +8,9 @@ interface Todo {
 }
 
 const ToDoList = () => {
-  //useState to help us hold state
   const [todos, setTodos] = useState<Todo[]>([]);
   const [error, setError] = useState("");
 
-  //Lets create a fetch data function to help us fetch our data with axios
   const fetchData = () => {
     axios
       .get("https://jsonplaceholder.typicode.com/posts")
